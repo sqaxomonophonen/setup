@@ -1,0 +1,20 @@
+--- config.def.h	2021-08-26 18:47:54.843646278 +0200
++++ config.h	2021-08-26 18:53:38.908803664 +0200
+@@ -5,7 +5,7 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
++static char *font = "-xos4-terminus-medium-*-*-*-18-*-*-*-*-*-*-*";
+ static int borderpx = 2;
+ 
+ /*
+@@ -100,7 +100,7 @@
+ 	"red3",
+ 	"green3",
+ 	"yellow3",
+-	"blue2",
++	"#1930ea",
+ 	"magenta3",
+ 	"cyan3",
+ 	"gray90",
