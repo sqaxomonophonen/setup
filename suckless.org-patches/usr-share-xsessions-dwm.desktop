@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=dwm
+Comment=dwm by suckless.org
+Exec=/usr/local/bin/dwm
+TryExec=/usr/local/bin/dwm
+Icon=
+Type=Application
