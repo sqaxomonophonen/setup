@@ -151,7 +151,7 @@ int main(int argc, char** argv)
 					double brightness = strtod(tmp, NULL);
 
 					const double power = 2.4;
-					const double step = 0.015;
+					const double step = 0.050;
 
 					double new_brightness = pow(pow(brightness / max_brightness, 1/power) + brightness_delta*step, power) * max_brightness;
 					if (new_brightness > max_brightness) new_brightness = max_brightness;
