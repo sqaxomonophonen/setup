@@ -43,8 +43,6 @@
 		} \
 	}
 
-#define PSFIX "/sys/class/power_supply/"
-
 static int wait_fd_seconds(int fd, double seconds)
 {
 	struct timeval tv;
@@ -181,13 +179,21 @@ int main(int argc, char** argv)
 		SEPARATOR;
 
 		{
+
+			#define PSFIX "/sys/class/power_supply/"
 			READTMP(PSFIX "BAT0/energy_now");
-			double now = strtod(tmp, NULL);
-
+			double now0 = strtod(tmp, NULL);
 			READTMP(PSFIX "BAT0/energy_full");
-			double full = strtod(tmp, NULL);
+			double full0 = strtod(tmp, NULL);
+			int pct0 = (int)round((now0 / full0) * 100.0);
 
-			int pct = (int)round((now / full) * 100.0);
+			READTMP(PSFIX "BAT1/energy_now");
+			double now1 = strtod(tmp, NULL);
+			READTMP(PSFIX "BAT1/energy_full");
+			double full1 = strtod(tmp, NULL);
+			int pct1 = (int)round((now1 / full1) * 100.0);
+
+			int pct = pct0 < pct1 ? pct0 : pct1;
 
 			READTMP(PSFIX "AC/online");
 			int charging = strcmp(tmp, "1") == 0;
