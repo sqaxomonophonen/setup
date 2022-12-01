@@ -14,6 +14,7 @@ highlight CursorLine cterm=NONE
 
 " highlight trailing whitespace
 highlight WhitespaceEOL ctermbg=red guibg=red
+highlight Search cterm=NONE ctermbg=green ctermfg=yellow
 autocmd BufRead,BufNew * match WhitespaceEOL /\s\+$/
 
 " :Whatever; turns off highlight of trailing whitespace
