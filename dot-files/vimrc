@@ -112,6 +112,14 @@ function! SwitchToTabIsSpacesWidth2()
 	set expandtab
 endfunction
 
+command! Ts3 call SwitchToTabIsSpacesWidth3()
+function! SwitchToTabIsSpacesWidth3()
+	set shiftwidth=3
+	set tabstop=13
+	set softtabstop=3
+	set expandtab
+endfunction
+
 command! Tt call SwitchToTabIsTabs()
 command! Tt8 call SwitchToTabIsTabs()
 function! SwitchToTabIsTabs()
