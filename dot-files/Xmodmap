@@ -1,4 +1,11 @@
 clear Lock
+
+! caps-lock => compose-key
 keycode 66 = Multi_key
+
+! DK-layout "<>"-key => shift
+keycode 94 = Shift_L
+
 keycode 37 = Control_L
 keycode 191 = Insert
+
