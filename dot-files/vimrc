@@ -25,6 +25,8 @@ endfunction
 
 set backspace=2
 
+" visual 4 lyfe
+map Q <Nop>
 
 " disable help via F1 (:help is fine!)
 nmap <F1> <nop>
