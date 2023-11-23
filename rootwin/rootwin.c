@@ -179,21 +179,32 @@ int main(int argc, char** argv)
 		SEPARATOR;
 
 		{
-
 			#define PSFIX "/sys/class/power_supply/"
 			READTMP(PSFIX "BAT0/energy_now");
-			double now0 = strtod(tmp, NULL);
+			const double now0 = strtod(tmp, NULL);
 			READTMP(PSFIX "BAT0/energy_full");
-			double full0 = strtod(tmp, NULL);
-			int pct0 = (int)round((now0 / full0) * 100.0);
+			const double full0 = strtod(tmp, NULL);
 
 			READTMP(PSFIX "BAT1/energy_now");
-			double now1 = strtod(tmp, NULL);
+			const double now1 = strtod(tmp, NULL);
 			READTMP(PSFIX "BAT1/energy_full");
-			double full1 = strtod(tmp, NULL);
-			int pct1 = (int)round((now1 / full1) * 100.0);
+			const double full1 = strtod(tmp, NULL);
 
-			int pct = pct0 < pct1 ? pct0 : pct1;
+			READTMP(PSFIX "BAT0/status");
+			const int bat0_is_discharging = strcmp("Discharging", tmp) == 0;
+			READTMP(PSFIX "BAT1/status");
+			const int bat1_is_discharging = strcmp("Discharging", tmp) == 0;
+
+			const int pct0 = (int)round((now0 / full0) * 100.0);
+			const int pct1 = (int)round((now1 / full1) * 100.0);
+			int pct;
+			if (bat0_is_discharging) {
+				pct = pct0;
+			} else if (bat1_is_discharging) {
+				pct = pct1;
+			} else {
+				pct = pct0 < pct1 ? pct0 : pct1;
+			}
 
 			READTMP(PSFIX "AC/online");
 			int charging = strcmp(tmp, "1") == 0;
