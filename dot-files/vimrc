@@ -1,5 +1,7 @@
 set encoding=utf8
-colorscheme elflord
+" colorscheme elflord
+colorscheme default
+set background=dark
 syn on
 set ai
 set ruler
