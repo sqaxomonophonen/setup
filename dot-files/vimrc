@@ -11,6 +11,7 @@ set modelines=0
 set nomodeline
 
 autocmd BufNewFile,BufRead * setlocal formatoptions-=r formatoptions-=c formatoptions-=o
+autocmd BufNewFile,BufRead *.* setlocal rnu
 
 highlight CursorLine cterm=NONE
 
