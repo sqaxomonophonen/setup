@@ -40,7 +40,7 @@ let g:os = substitute(system('uname'), '\n', '', '')
 " xsel integration
 command! -range Xc <line1>,<line2>call XSelCopy()
 function! XSelCopy()
-	if g:os == "Linux"
+	if g:os == "Linux" || g:os == "FreeBSD"
 		echo system("xsel -ib", join(getline(a:firstline, a:lastline),"\n"))
 	elseif g:os == "Darwin"
 		echo system("pbcopy", join(getline(a:firstline, a:lastline),"\n"))
@@ -49,7 +49,7 @@ endfunction
 
 command! Xp call XSelPaste()
 function! XSelPaste()
-	if g:os == "Linux"
+	if g:os == "Linux" || g:os == "FreeBSD"
 		r!xsel -b
 	elseif g:os == "Darwin"
 		r!pbpaste
