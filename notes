@@ -1,0 +1,20 @@
+
+FONTS
+
+fonts be difficult yo
+
+whatever might work:
+  XTerm*font: -xos4-terminus-medium-r-normal--18-180-72-72-c-100-iso10646-1
+  XTerm*font: -xos4-terminus-*-*-*-*-28-*-*-*-*-*-*-*
+  XTerm*font: terminus:size=24
+  "xos4 Terminus:size=24"
+
+fonts.dir may have to be generated before xfontsel and other programs
+recognizes it.
+xset fp+ /usr/share/fonts/X11/misc
+
+
+OTHER STUFF
+ - slock may be difficult to build (requires permissions to disable OOM killer,
+   and other stuff), but i3lock is fine
+
