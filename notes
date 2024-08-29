@@ -1,5 +1,7 @@
 
+=====
 FONTS
+=====
 
 fonts be difficult yo
 
@@ -14,7 +16,18 @@ recognizes it.
 xset fp+ /usr/share/fonts/X11/misc
 
 
-OTHER STUFF
- - slock may be difficult to build (requires permissions to disable OOM killer,
-   and other stuff), but i3lock is fine
+==============
+SCREEN LOCKING
+==============
 
+slock may be difficult to build (requires permissions to disable OOM killer,
+and other stuff), but i3lock is fine
+
+
+
+=======
+NETWORK
+=======
+
+Use "nmtui", a ncurses tool that replaces a typical dock network manager
+widget; works for both ethernet and wifi.
