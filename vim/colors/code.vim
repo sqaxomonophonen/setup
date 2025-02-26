@@ -1,10 +1,22 @@
 " everything is green except (white) comments like this
 
 set background=dark
-highlight clear
 
-for target in [ 'Normal', 'QuickFixLine', 'ColorColumn', 'CursorColumn', 'CursorLine', 'CursorLineNr', 'Folded', 'Conceal', 'Cursor', 'Directory', 'EndOfBuffer', 'ErrorMsg', 'FoldColumn', 'IncSearch', 'LineNr', 'MatchParen', 'ModeMsg', 'MoreMsg', 'NonText', 'Pmenu', 'PmenuSbar', 'PmenuSel', 'PmenuThumb', 'PmenuMatch', 'PmenuMatchSel', 'Question', 'Search', 'SignColumn', 'SpecialKey', 'SpellBad', 'SpellCap', 'SpellLocal', 'SpellRare', 'StatusLine', 'StatusLineNC', 'TabLine', 'TabLineFill', 'TabLineSel', 'Terminal', 'Title', 'VertSplit', 'Visual', 'VisualNOS', 'WarningMsg', 'WildMenu', 'Comment', 'Constant', 'Error', 'Function', 'Identifier', 'Ignore', 'Operator', 'PreProc', 'Repeat', 'Special', 'Statement', 'Todo', 'Type', 'Underlined', 'CursorIM', 'ToolbarLine', 'ToolbarButton', 'DiffAdd', 'DiffChange', 'DiffText', 'DiffDelete' ]
-	execute 'highlight ' . target . ' ctermfg=green'
+for target in [ 'Normal', 'QuickFixLine', 'ColorColumn', 'CursorColumn', 'Folded', 'Conceal', 'Cursor', 'Directory', 'EndOfBuffer', 'FoldColumn', 'IncSearch', 'MatchParen', 'MoreMsg', 'NonText', 'Question', 'SignColumn', 'SpecialKey', 'SpellBad', 'SpellCap', 'SpellLocal', 'SpellRare', 'Terminal', 'VertSplit', 'WarningMsg', 'WildMenu', 'Constant', 'Function', 'Identifier', 'Ignore', 'Operator', 'PreProc', 'Repeat', 'Special', 'Statement', 'Type', 'Underlined', 'CursorIM', 'DiffAdd', 'DiffChange', 'DiffText', 'DiffDelete' ]
+	execute 'highlight ' . target . ' ctermfg=green ctermbg=none'
 endfor
 
 highlight Comment ctermfg=white
+
+" ok... ui is blue
+for target in [ 'TabLine', 'TabLineFill', 'StatusLineTerm', 'StatusLineTermNC', 'StatusLine', 'StatusLineNC', 'ToolbarLine', 'ToolbarButton', 'Title', 'ModeMsg', 'LineNr', 'CursorLine', 'CursorLineNr' ]
+	execute 'highlight ' . target . ' ctermfg=blue ctermbg=none'
+endfor
+
+" ... mostly ....
+highlight TabLineSel ctermfg=white
+highlight Todo ctermfg=white ctermbg=magenta " special rule for FIXME, TODO, XXX and more?
+highlight Error ctermfg=red
+highlight ErrorMsg ctermfg=red
+
+highlight Visual ctermfg=yellow ctermbg=blue
