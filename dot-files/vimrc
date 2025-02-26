@@ -1,8 +1,7 @@
 set encoding=utf8
-" colorscheme elflord
-colorscheme default
 set background=dark
 syn on
+colorscheme code
 set ai
 set ruler
 set hlsearch
@@ -16,7 +15,7 @@ highlight CursorLine cterm=NONE
 
 " highlight trailing whitespace
 highlight WhitespaceEOL ctermbg=red guibg=red
-highlight Search cterm=NONE ctermbg=green ctermfg=yellow
+highlight Search cterm=NONE ctermbg=red ctermfg=white
 autocmd BufRead,BufNew * match WhitespaceEOL /\s\+$/
 
 " :Whatever; turns off highlight of trailing whitespace
@@ -140,3 +139,5 @@ function! SwitchToTabIsTabsWidth4()
 	set softtabstop=0
 	set noexpandtab
 endfunction
+
+Tt4
