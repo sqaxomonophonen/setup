@@ -1,12 +1,13 @@
 Shell*saveLines:        3000
 XTerm*saveLines:        3000
-XTerm*foreground: rgb:ef/ef/ef
+XTerm*foreground: rgb:ff/ff/ff
 !XTerm*background: rgb:09/09/1f
-XTerm*background: rgb:00/08/10
+XTerm*background: rgb:12/09/00
 XTerm*color4: rgb:28/68/ff
 XTerm*color6: rgb:00/e0/e0
 XTerm*color12: rgb:50/a0/ff
 XTerm*color14: rgb:40/e0/e0
+XTerm*color10: rgb:80/ff/10
 !XTerm*background: rgb:0c/23/2a
 !XTerm*foreground: rg:fc/ef/db
 !XTerm*background: rgb:25/44/41
