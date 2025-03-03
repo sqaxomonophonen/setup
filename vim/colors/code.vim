@@ -12,7 +12,7 @@ highlight Comment ctermfg=white
 highlight MatchParen ctermbg=blue
 
 " diffs
-highlight diffAdded ctermfg=yellow
+highlight diffAdded ctermfg=white
 highlight diffRemoved ctermfg=magenta
 
 " ui
