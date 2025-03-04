@@ -25,5 +25,4 @@ highlight Todo ctermfg=white ctermbg=magenta " special rule for FIXME, TODO, XXX
 highlight Error ctermfg=red ctermbg=black
 highlight ErrorMsg ctermfg=red ctermbg=black
 
-highlight Visual ctermfg=yellow ctermbg=blue
-
+highlight Visual cterm=none ctermfg=yellow ctermbg=blue
