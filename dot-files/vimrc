@@ -5,6 +5,7 @@ colorscheme code
 set ai
 set ruler
 set hlsearch
+set nojoinspaces
 
 set modelines=0
 set nomodeline
