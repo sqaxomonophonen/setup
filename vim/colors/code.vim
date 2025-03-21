@@ -27,3 +27,5 @@ highlight ErrorMsg ctermfg=red ctermbg=black
 highlight WarningMsg cterm=none ctermfg=magenta ctermbg=none
 
 highlight Visual cterm=none ctermfg=yellow ctermbg=blue
+
+highlight Search cterm=none ctermfg=yellow ctermbg=red
