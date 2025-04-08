@@ -19,6 +19,17 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 highlight Search cterm=NONE ctermbg=red ctermfg=white
 autocmd BufRead,BufNew * match WhitespaceEOL /\s\+$/
 
+" custom highlighters, e.g. :M1 /foo/ and :M2 /bar/. use :M1x etc to clear
+highlight M1 cterm=NONE ctermbg=cyan ctermfg=black
+highlight M2 cterm=NONE ctermbg=magenta ctermfg=black
+highlight M3 cterm=NONE ctermbg=yellow ctermfg=black
+command! -nargs=1 M1 :match M1 <args>
+command! -nargs=1 M2 :2match M2 <args>
+command! -nargs=1 M3 :3match M3 <args>
+command! M1x :match
+command! M2x :2match
+command! M3x :3match
+
 " :Whatever; turns off highlight of trailing whitespace
 command! Whatever call Whatever()
 function! Whatever()
