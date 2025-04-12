@@ -13,8 +13,8 @@ highlight MatchParen ctermbg=blue
 
 " diffs
 highlight gitDiff ctermfg=blue
-highlight diffAdded ctermfg=white
-highlight diffRemoved ctermfg=magenta
+highlight diffAdded ctermfg=cyan
+highlight diffRemoved ctermfg=red
 
 " ui
 for target in [ 'TabLine', 'TabLineFill', 'StatusLineTerm', 'StatusLineTermNC', 'StatusLine', 'StatusLineNC', 'ToolbarLine', 'ToolbarButton', 'Title', 'ModeMsg', 'LineNr', 'CursorLine', 'CursorLineNr' ]
